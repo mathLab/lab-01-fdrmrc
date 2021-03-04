@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "main.cc exists",
+      "setup": "",
+      "run": "test -f source/main.cc",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "point_tests.cc exists",
+      "setup": "",
+      "run": "test -f source/point_tests.cc",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Build",
+      "setup": "",
+      "run": ".scripts/dr.sh \"mkdir build; cd build; cmake ..; make\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "run tests",
+      "setup": "",
+      "run": ".scripts/dr.sh \"mkdir build; cd build; cmake ..; make; ./gtest\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}
